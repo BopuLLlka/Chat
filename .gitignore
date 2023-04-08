@@ -14,3 +14,9 @@
 /Chat.Infrastructure/obj
 /Chat.Infrastructure/.vs/ProjectEvaluation
 /Chat.Infrastructure/bin/Debug/net7.0
+/Chat.Client.Console/bin/Release/net7.0
+/Chat.Client.Console/Properties/PublishProfiles
+/Chat.Client.Console/Chat.Client.Console.csproj.user
+/Chat.Infrastructure/bin/Release/net7.0
+/Chat.Server/Properties/PublishProfiles/FolderProfile.pubxml.user
+/Chat.Server/Properties/PublishProfiles/FolderProfile.pubxml

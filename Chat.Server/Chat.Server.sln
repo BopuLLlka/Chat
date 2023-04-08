@@ -9,6 +9,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chat.Infrastructure", "..\Chat.Infrastructure\Chat.Infrastructure.csproj", "{AB2396C5-AAAA-4E50-ADD9-2950F1A32C0E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{08922B7F-34D3-47D4-B429-915634AF79DB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chat.Client.Console", "..\Chat.Client.Console\Chat.Client.Console.csproj", "{4A945602-BA5D-4A23-B3EE-B6A22E623BA2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +27,17 @@ Global
 		{AB2396C5-AAAA-4E50-ADD9-2950F1A32C0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB2396C5-AAAA-4E50-ADD9-2950F1A32C0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB2396C5-AAAA-4E50-ADD9-2950F1A32C0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A945602-BA5D-4A23-B3EE-B6A22E623BA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A945602-BA5D-4A23-B3EE-B6A22E623BA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A945602-BA5D-4A23-B3EE-B6A22E623BA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A945602-BA5D-4A23-B3EE-B6A22E623BA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{AB2396C5-AAAA-4E50-ADD9-2950F1A32C0E} = {5B5EB93C-150F-463A-A588-7EC3D1BE7BEA}
+		{4A945602-BA5D-4A23-B3EE-B6A22E623BA2} = {08922B7F-34D3-47D4-B429-915634AF79DB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4B3D7CD6-9F79-468B-9A73-866B2AFE768A}
