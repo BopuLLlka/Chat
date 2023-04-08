@@ -1,35 +1,20 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using Chat.Client.Console.Services;
+
+Console.WriteLine("Hello");
+
+var signalRConnection = new SignalRService();
 
 
-using System.Text.Json;
+Console.WriteLine("Enter your name: ");
+var userName = Console.ReadLine() ?? throw new ArgumentException("userName is null");
 
-var httpClient = new HttpClient();
+Console.WriteLine("Chat started");
 
-Console.WriteLine("Enter your name:");
-
-var name = Console.ReadLine() ?? throw new ArgumentException("Name is null!");
-
-Console.WriteLine("Enter your age:");
-
-var age = Console.ReadLine() ?? throw new ArgumentException("Age is null!");
-
-
-var clinet = new Client {
-    Name = name,
-    Age = age,
-};
-
-var jsonString = JsonSerializer.Serialize(clinet);
-
-StringContent postData = new StringContent(jsonString);
-
-var postResult = await httpClient.PostAsync($"https://localhost:7047/HelloPost", postData);
-var postcontent = await postResult.Content.ReadAsStringAsync();
-
-Console.WriteLine(postcontent);
-
-public class Client 
-{   
-    public string Name { get; set; }
-    public string Age { get; set; }
+while (true)
+{
+    var message = Console.ReadLine() ?? throw new ArgumentException("Message is null");
+    await signalRConnection.SendMessage(userName, message);
 }
+
+
+

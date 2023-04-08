@@ -1,12 +1,15 @@
-﻿using Microsoft.AspNetCore.SignalR;
+﻿using Chat.Infrastructure.Interfaces;
+using Chat.Infrastructure.Models;
+using Microsoft.AspNetCore.SignalR;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace Chat.Server.SignalR
 {
-    public class MainHub : Hub<IChatClient>
+    public class MainHub : Hub
     {
-        public async Task SendMessage(string user, string message) => await Clients.All.ReceiveMessage(user, message);
-        
-        public string GetUserWithMessage(string user, string message) =>  user + message;
-
+        public async Task SendMessage(User user, Message message)
+        {
+            await Clients.All.SendAsync("ReceiveMessage", user, message);
+        }
     }
 }

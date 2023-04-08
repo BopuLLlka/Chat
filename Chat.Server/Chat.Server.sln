@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chat.Server", "Chat.Server.csproj", "{76C10F3F-996D-4D68-847C-BB74CAC19F8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chat.Server", "Chat.Server.csproj", "{76C10F3F-996D-4D68-847C-BB74CAC19F8B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{5B5EB93C-150F-463A-A588-7EC3D1BE7BEA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chat.Infrastructure", "..\Chat.Infrastructure\Chat.Infrastructure.csproj", "{AB2396C5-AAAA-4E50-ADD9-2950F1A32C0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{76C10F3F-996D-4D68-847C-BB74CAC19F8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76C10F3F-996D-4D68-847C-BB74CAC19F8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76C10F3F-996D-4D68-847C-BB74CAC19F8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB2396C5-AAAA-4E50-ADD9-2950F1A32C0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB2396C5-AAAA-4E50-ADD9-2950F1A32C0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB2396C5-AAAA-4E50-ADD9-2950F1A32C0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB2396C5-AAAA-4E50-ADD9-2950F1A32C0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AB2396C5-AAAA-4E50-ADD9-2950F1A32C0E} = {5B5EB93C-150F-463A-A588-7EC3D1BE7BEA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4B3D7CD6-9F79-468B-9A73-866B2AFE768A}

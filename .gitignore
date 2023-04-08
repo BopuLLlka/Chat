@@ -10,3 +10,7 @@
 /Chat.Server/obj
 /Chat.Client.Console/.vs/ProjectEvaluation
 /Chat.Server/.vs
+/Chat.Infrastructure/.vs/Chat.Infrastructure
+/Chat.Infrastructure/obj
+/Chat.Infrastructure/.vs/ProjectEvaluation
+/Chat.Infrastructure/bin/Debug/net7.0
