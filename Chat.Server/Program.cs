@@ -1,4 +1,5 @@
 using Chat.Server.SignalR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 
@@ -9,6 +10,13 @@ var app = builder.Build();
 
 
 app.MapGet("/", () => "Hello World!");
+app.MapGet("/a", Hello);
+
+string Hello()
+{
+    return "Hello";
+    
+}
 
 app.MapGet("/GetUserWithMessage", ([FromQuery] string name) => {
     var hub = new MainHub();
@@ -20,14 +28,13 @@ app.MapGet("/GetUserWithMessage", ([FromQuery] string name) => {
 });
 
 app.MapGet("/Hello", ([FromQuery] string name) => $"Hello: {name}!");
-app.MapPost("/HelloPost", () =>
+app.MapPost("/HelloPost", async (HttpContext httpcontext) =>
 {
+    using StreamReader reader = new StreamReader(httpcontext.Request.Body);
+    string name = await reader.ReadToEndAsync();
+    var client = JsonSerializer.Deserialize<Client>(name);
+    return $"Client name: {client.Name}, Client age: {client.Age}";
 
-    //var client = JsonSerializer.Deserialize<Client>(clientString);
-
-    //return client.Name;
-
-    return "123";
 });
 
 

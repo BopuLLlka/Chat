@@ -28,7 +28,6 @@ var postcontent = await postResult.Content.ReadAsStringAsync();
 
 Console.WriteLine(postcontent);
 
-
 public class Client 
 {   
     public string Name { get; set; }
