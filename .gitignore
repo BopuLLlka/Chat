@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Chat.Client.Console/bin/Debug/net7.0
+/Chat.Server/bin/Debug/net7.0
+/Chat.Client.Console/obj
+/Chat.Client.Console/.vs/Chat.Client.Console
+/Chat.Server/.vs/Chat.Server
