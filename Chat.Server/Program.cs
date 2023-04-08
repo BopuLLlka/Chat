@@ -33,7 +33,7 @@ app.MapPost("/HelloPost", async (HttpContext httpcontext) =>
     using StreamReader reader = new StreamReader(httpcontext.Request.Body);
     string name = await reader.ReadToEndAsync();
     var client = JsonSerializer.Deserialize<Client>(name);
-    return $"Имя клиента: {client.Name}, Возраст клиент: {client.Age}";
+    return $"Client name: {client.Name}, Client age: {client.Age}";
 
 });
 
