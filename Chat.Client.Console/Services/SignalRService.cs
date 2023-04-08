@@ -17,7 +17,7 @@ namespace Chat.Client.Console.Services
         private HubConnection _connection;
 
         public SignalRService() {
-            _connection = new HubConnectionBuilder().WithAutomaticReconnect().WithUrl("https://localhost:7047/hub").Build();
+            _connection = new HubConnectionBuilder().WithAutomaticReconnect().WithUrl("https://6dlv1xtp-7047.euw.devtunnels.ms/hub").Build();
 
             _connection.StartAsync().Wait();
 
@@ -26,6 +26,7 @@ namespace Chat.Client.Console.Services
                 System.Console.WriteLine($"{user.Name}: {message.Text}");
             });
         }
+       
 
         public async Task SendMessage(string userName, string messageText)
         {
