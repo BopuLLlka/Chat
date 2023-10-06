@@ -11,6 +11,7 @@ html, body {
     height: 100%;
 }
 #MessageContainer{
+    scrollbar-color: red yellow;
     overflow-y: auto;
     overflow-x: hidden;
     background-color:yellow;
@@ -55,5 +56,15 @@ html, body {
     width: calc(100% - 55px);
     padding: 20px;
     
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background: #808080;
+}
+::-webkit-scrollbar-thumb{
+    background: #000;
+    border-radius:8px;
 }
 
