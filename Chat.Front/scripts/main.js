@@ -1,5 +1,15 @@
+const ThisUserName = "Nyah";
+
+
 function ready() {
-    console.log("js is active");
+    let imageButton = document.getElementById("imageButton");
+    let textArea = document.getElementById("textArea");
+    
+
+    imageButton.addEventListener( "click" , async () => 
+    {
+        await SendMessage(textArea.value);
+    });
 }
 
 document.addEventListener("DOMContentLoaded", ready);
@@ -14,7 +24,7 @@ async function start() {
         await connection.start();
         console.log("SignalR Connected.");
 
-        await SendMessage("hello");
+        
 
     } catch (err) {
         console.log(err);
@@ -29,20 +39,23 @@ connection.onclose(async () => {
 
 async function SendMessage(messageText){
     try {
-        let user = new User(1, "qwe");
+        let user = new User(1, ThisUserName);
         let message = new Message(1, messageText, 1,2, true);
 
-        console.log("send message to user: ");
-        console.log(user);
-        console.log("send message: ");
-        console.log(message);
         await connection.invoke("SendMessage", user, message);
     } catch (err) {
         console.error(err);
     }
 }
 
+
+
 connection.on("ReceiveMessage", (user, message) => {
+    const messageBubble = document.createElement("div");
+    messageBubble.classList.add(user.name == ThisUserName ? "rightBubble" : "leftBubble");
+    messageBubble.textContent = `${user.name}: ${message.text}`;
+    document.getElementById("MessageContainer").appendChild(messageBubble);
+
     console.log(user);
     console.log(message);
 });
