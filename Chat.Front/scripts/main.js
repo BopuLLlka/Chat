@@ -21,12 +21,16 @@ const connection = new signalR.HubConnectionBuilder()
 
 async function start() {
     try {
+
+        console.log("starting...");
         await connection.start();
         console.log("SignalR Connected.");
 
         
 
     } catch (err) {
+        console.log("ERROR!!!");
+
         console.log(err);
         setTimeout(start, 5000);
     }
