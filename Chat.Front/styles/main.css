@@ -1,0 +1,18 @@
+#MainContainer{
+    background-color:red;
+    width: 500px;
+    height: 150px;
+}
+#MessageContainer{
+    background-color:yellow;
+    width: 250px;
+    height: 70px;
+
+}
+#SendMessage{
+    background-color:green;
+    width: 30px;
+    height: 20px;
+
+}
+
